@@ -567,3 +567,23 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 .t-numbers{background:#FFE9DD}.t-numbers b{color:#B4410E}
 .books4>li:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 6px)}
 @media(min-width:700px){.books4>li:last-child:nth-child(odd){grid-column:auto;width:auto}}
+
+
+.tbar{background:var(--pale);border-bottom:1.5px solid var(--ink);padding:16px 0 14px}
+.tbadges{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tbadges li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;min-width:0}
+.tbadges .tbi{width:60px;height:60px;display:block}
+.tbadges li>span{display:flex;flex-direction:column;line-height:1.2}
+.tbadges b{font:700 12.5px/1.2 var(--bd);color:var(--ink)}
+.tbadges small{font:500 11.5px/1.25 var(--bd);color:var(--ink2);margin-top:2px}
+.rzp{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 12px;margin:14px 0 0;font:700 13px/1.2 var(--bd);color:var(--ink)}
+.rzp>span{display:flex;align-items:center;gap:6px}.rzp svg{width:18px;height:18px}
+.rzp-b{display:block;line-height:0}.rzp-b img{width:113px;height:45px;display:block}
+.bbt2{margin:14px 0 0;padding:14px 0 12px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.tb-grid .ic.ib{flex:0 0 56px;width:56px;height:56px;border:0;background:none;border-radius:0}
+.tb-grid .ic.ib .tbi{width:56px;height:56px;display:block}
+.tb-grid .rzp-b{margin-top:10px;display:inline-block}
+@media (min-width:900px){.tbadges{gap:16px}.tbar .tbadges .tbi{width:72px;height:72px}.tbar .tbadges li{flex-direction:row;justify-content:center;text-align:left;gap:12px}.tbar .tbadges b{font-size:15px}.tbar .tbadges small{font-size:13px}.tbar{padding:20px 0 18px}}
+@media (max-width:370px){.tbadges .tbi{width:54px;height:54px}.tbadges b{font-size:11.5px}.tbadges small{font-size:10.5px}}
+.tb-grid .ic:not(.ib){flex:0 0 56px;width:56px;height:56px;border:3px solid var(--ink);border-radius:50%;background:var(--pale);color:var(--ink)}
+.tb-grid .ic:not(.ib) svg{width:24px;height:24px}
