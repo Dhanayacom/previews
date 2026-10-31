@@ -3,9 +3,9 @@
 "use strict";
 
 var TIERS={
-  1:{name:"1 set",books:4,price:598,mrp:999,upiSave:100,real:true},
-  2:{name:"2 sets",books:8,price:1096,mrp:1998,upiSave:100},
-  3:{name:"3 sets",books:12,price:1476,mrp:2997,upiSave:100}
+  1:{name:"1 set",books:5,price:598,mrp:999,upiSave:100,real:true},
+  2:{name:"2 sets",books:10,price:1096,mrp:1998,upiSave:100},
+  3:{name:"3 sets",books:15,price:1476,mrp:2997,upiSave:100}
 };
 function pct(p,m){return Math.round((m-p)/m*100)+"% off";}
 
@@ -54,7 +54,7 @@ function drawCart(){
   if(!n){box.innerHTML='<div class="empty"><p><b>Your cart is empty. Pick your magic set.</b></p><a class="btn btn-red" href="product.html#buy">Choose your set</a></div>';foot.style.display="none";return;}
   var html="",total=0,mrp=0,keys=Object.keys(c);
   keys.forEach(function(k){var t=TIERS[k],q=c[k];total+=t.price*q;mrp+=t.mrp*q;
-    html+='<div class="line" style="margin-bottom:10px"><img src="'+IMG+'" alt="" width="72" height="72"><div style="flex:1"><div class="t">'+t.name+'</div><div class="small muted">'+t.books+' books: Maths, English, Drawing, Hindi'+(t.books>4?' ×'+(t.books/4):'')+'</div><div><b>'+inr(t.price-t.upiSave)+' paid online</b> <span class="small muted">('+inr(t.price)+' Cash on Delivery)</span> <s class="small muted">MRP '+inr(t.mrp)+'</s>'+(t.real?'':' <span class="ptag">Sample price</span>')+'</div><div class="qty"><button type="button" aria-label="One less" data-q="'+k+'" data-d="-1">−</button><span>'+q+'</span><button type="button" aria-label="One more" data-q="'+k+'" data-d="1">+</button></div></div></div>';});
+    html+='<div class="line" style="margin-bottom:10px"><img src="'+IMG+'" alt="" width="72" height="72"><div style="flex:1"><div class="t">'+t.name+'</div><div class="small muted">'+t.books+' books: Numbers, Maths, English, Drawing, Hindi'+(t.books>5?' ×'+(t.books/5):'')+'</div><div><b>'+inr(t.price-t.upiSave)+' paid online</b> <span class="small muted">('+inr(t.price)+' Cash on Delivery)</span> <s class="small muted">MRP '+inr(t.mrp)+'</s>'+(t.real?'':' <span class="ptag">Sample price</span>')+'</div><div class="qty"><button type="button" aria-label="One less" data-q="'+k+'" data-d="-1">−</button><span>'+q+'</span><button type="button" aria-label="One more" data-q="'+k+'" data-d="1">+</button></div></div></div>';});
   var top=keys.map(Number).sort().pop();
   if(keys.length===1&&top<3&&c[top]===1){var nx=TIERS[top+1],cur=TIERS[top];
     html+='<div class="nudge">Add 1 more set for '+inr(nx.price-cur.price)+' more and save '+inr((nx.mrp-nx.price)-(cur.mrp-cur.price))+'. <button type="button" class="btn btn-line" data-up="'+top+'">Switch to '+nx.name+'</button></div>';}
