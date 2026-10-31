@@ -502,3 +502,28 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 .pdp{grid-template-columns:minmax(0,1fr)}.tiers{min-width:0}.bb{min-width:0}
 @media (min-width:900px){.pdp{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
 .site-footer .tbc,footer .tbc{color:#AEB7CF}
+
+.usp-t ul{gap:6px}
+.usp-t li{flex-direction:column;gap:6px;text-transform:none!important;letter-spacing:0!important}
+.usp-t li>span:last-child{display:flex;flex-direction:column;line-height:1.2}
+.usp-t b{font:700 12.5px/1.2 var(--bd);color:#fff}
+.usp-t small{font:500 11.5px/1.25 var(--bd);color:#C9CFE0;margin-top:2px}
+.usp-t .ic{width:28px;height:28px}.usp-t .ic svg{width:24px;height:24px}
+@media (min-width:900px){.usp-t li{flex-direction:row;gap:12px;text-align:left;justify-content:center}.usp-t b{font-size:15px}.usp-t small{font-size:13px}.usp-t .ic svg{width:28px;height:28px}.usp-t .ic{width:32px;height:32px}}
+@media (max-width:370px){.usp-t b{font-size:11.5px}.usp-t small{font-size:10.5px}}
+.tb{border-top:1px solid var(--hair)}
+.tb-grid{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.tb-grid li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--hair)}
+.tb-grid .ic{flex:0 0 40px;width:40px;height:40px;border:1.5px solid var(--ink);border-radius:var(--rs);background:var(--pale);color:var(--ink);display:flex;align-items:center;justify-content:center}
+.tb-grid .ic svg{width:22px;height:22px}
+.tb-grid h3{font:700 16px/1.25 var(--bd);letter-spacing:-.01em;margin:0 0 3px}
+.tb-grid p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink2)}
+.paywith{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:18px}
+.pw-l{font:600 12px/1 var(--bd);letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)}
+.paywith ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.paywith li{display:flex;align-items:center;gap:6px;border:1.5px solid var(--ink);border-radius:var(--rs);padding:6px 10px;font:700 13px/1 var(--bd);background:#fff}
+.paywith li svg{width:18px;height:18px}
+@media (min-width:900px){.tb-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:32px}.tb-grid li{padding:20px 0}}
+.tb-grid .paywith{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tb-grid .paywith li{display:flex;align-items:center;gap:6px;border:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);border-radius:var(--rs);padding:6px 9px;font:700 13px/1 var(--bd);background:#fff}
+.tb-grid .paywith li svg{width:17px;height:17px}
