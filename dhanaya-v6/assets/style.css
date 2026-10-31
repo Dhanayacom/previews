@@ -587,3 +587,11 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 @media (max-width:370px){.tbadges .tbi{width:54px;height:54px}.tbadges b{font-size:11.5px}.tbadges small{font-size:10.5px}}
 .tb-grid .ic:not(.ib){flex:0 0 56px;width:56px;height:56px;border:3px solid var(--ink);border-radius:50%;background:var(--pale);color:var(--ink)}
 .tb-grid .ic:not(.ib) svg{width:24px;height:24px}
+
+.partners{margin:14px 0 0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.pp-h{display:flex;align-items:center;gap:6px;margin:0;font:700 13px/1.2 var(--bd);color:var(--ink)}.pp-h svg{width:16px;height:16px}
+.pp-logos{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.pp-left{justify-content:flex-start;margin-top:10px}
+.payu-b{display:flex;align-items:center;justify-content:center;width:113px;height:45px;box-sizing:border-box;background:#fff;border:1.5px solid #C5CAD6;border-radius:6px;line-height:0}
+.payu-b img{width:59px;height:32px;display:block}
+.tb-grid .rzp-b{margin-top:0}
