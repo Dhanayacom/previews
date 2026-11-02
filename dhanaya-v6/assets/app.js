@@ -3,9 +3,9 @@
 "use strict";
 
 var TIERS={
-  1:{name:"1 set",books:5,price:598,mrp:999,upiSave:100,real:true},
-  2:{name:"2 sets",books:10,price:1096,mrp:1998,upiSave:100},
-  3:{name:"3 sets",books:15,price:1476,mrp:2997,upiSave:100}
+  1:{name:"1 set",books:5,price:749,mrp:999,upiSave:100,real:true},
+  2:{name:"2 sets",books:10,price:1349,mrp:1998,upiSave:100},
+  3:{name:"3 sets",books:15,price:1899,mrp:2997,upiSave:100}
 };
 function pct(p,m){return Math.round((m-p)/m*100)+"% off";}
 
@@ -21,7 +21,7 @@ function fillTiers(){
     var t=TIERS[card.getAttribute("data-tier")];
     var f=function(k,v){$$("[data-f='"+k+"']",card).forEach(function(e){e.textContent=v;});};
     f("price",inr(t.price)); f("mrp",inr(t.mrp)); f("perbook",inr(t.price/t.books));
-    f("save",inr(t.mrp-t.price)); f("pct",pct(t.price,t.mrp)); f("upi",inr(t.price-t.upiSave));
+    f("save",inr(t.mrp-t.price)); f("pct",pct(t.price,t.mrp)); f("upi",inr(t.price-t.upiSave)); f("upipb",inr((t.price-t.upiSave)/t.books)); f("upipct",pct(t.price-t.upiSave,t.mrp));
   });
 }
 function render(){
@@ -70,10 +70,10 @@ document.addEventListener("click",function(e){
   if(u){var k2=+u.getAttribute("data-up"),c2={};c2[k2+1]=1;setCart(c2);return;}
   var a=e.target.closest("[data-buy]");
   if(a){e.preventDefault();var c3=getCart();c3[sel]=(c3[sel]||0)+1;setCart(c3);open("cart");
-    toast(a.getAttribute("data-buy")==="upi"?"Demo: on the live store this opens Breeze checkout with the ₹100 online saving.":"Demo: on the live store this opens Breeze checkout (Cash on Delivery).");return;}
+    toast(a.getAttribute("data-buy")==="upi"?"Demo: on the live store this opens our secure checkout with the ₹100 online saving.":"Demo: on the live store this opens our secure checkout (Cash on Delivery).");return;}
   var o=e.target.closest("[data-open]"); if(o){e.preventDefault();open(o.getAttribute("data-open"));return;}
   if(e.target.closest("[data-close]")||e.target.classList.contains("scrim")){closeAll();return;}
-  var ck=e.target.closest("[data-checkout]"); if(ck){toast("Demo: this button opens Breeze checkout (mobile OTP) on the live store.");return;}
+  var ck=e.target.closest("[data-checkout]"); if(ck){toast("Demo: this button opens our secure checkout on the live store.");return;}
   var ph=e.target.closest("[data-toggle-ph]"); if(ph){var on=document.body.classList.toggle("show-ph");ph.textContent=on?"Hide marks":"Show marks";ph.setAttribute("aria-pressed",on?"true":"false");return;}
 });
 var last=null;

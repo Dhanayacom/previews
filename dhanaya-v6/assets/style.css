@@ -595,3 +595,35 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 .payu-b{display:flex;align-items:center;justify-content:center;width:113px;height:45px;box-sizing:border-box;background:#fff;border:1.5px solid #C5CAD6;border-radius:6px;line-height:0}
 .payu-b img{width:59px;height:32px;display:block}
 .tb-grid .rzp-b{margin-top:0}
+
+.pricebox .now-l{font:600 14px/1.2 var(--bd);color:var(--ink);margin-left:-2px}
+.tier .price{display:flex;flex-direction:column;align-items:flex-end;line-height:1.05}
+.tier .price small{font:600 11px/1.2 var(--bd);color:var(--ink2);letter-spacing:0}
+.paym{border:0;margin:14px 0 4px;padding:0;display:grid;gap:8px;min-width:0}
+.paym legend{font:700 12px/1.2 var(--bd);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:8px;padding:0}
+.pm{display:grid;grid-template-columns:22px minmax(0,1fr) auto;column-gap:10px;align-items:center;border:1px solid var(--hair);border-radius:var(--r);padding:12px 14px;cursor:pointer;position:relative;background:#fff}
+.pm input{position:absolute;opacity:0;pointer-events:none}
+.pm .radio{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--ink);box-sizing:border-box}
+.pm:has(input:checked){border:2px solid var(--ink);background:var(--pale);padding:11px 13px}
+.pm:has(input:checked) .radio{border:6px solid var(--ink)}
+.pm:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:2px}
+.pm-t{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pm-t b{font:700 16px/1.2 var(--bd);color:var(--ink)}
+.pm-t small{font:500 12.5px/1.3 var(--bd);color:var(--ink2)}
+.pm .chips{display:flex;gap:6px;margin-top:5px;flex-wrap:wrap}
+.pm .chips i{font:700 11.5px/1 var(--bd);font-style:normal;display:inline-flex;align-items:center;gap:4px;border:1.5px solid var(--ink);border-radius:var(--rs);padding:4px 7px;background:#fff;color:var(--ink)}
+.pm .chips svg{width:14px;height:14px}
+.pm-p{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.pm-p b{font:700 20px/1 var(--bd);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.pm-p .save{background:var(--grass);color:var(--ink);font:700 12px/1.2 var(--bd);border-radius:4px;padding:3px 7px;white-space:nowrap}
+.pm-cod .pm-t b{font-weight:600}
+.sticky .pl .sv{color:var(--ink2);font-size:12px}
+@supports selector(:has(*)){
+ .cta-cod{display:none}
+ .bb:has(.paym input[value="cod"]:checked) .cta-cod{display:flex}
+ .bb:has(.paym input[value="cod"]:checked) .cta-upi{display:none}
+ .paybtns{grid-template-columns:1fr!important}
+}
+@media (max-width:370px){.pm{padding:11px 11px;column-gap:8px}.pm-t b{font-size:15px}.pm-p b{font-size:18px}}
+.ppsave{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:8px 0 6px;padding:8px 12px;background:var(--gpale,#EEF8E4);border:1.5px solid var(--ink);border-radius:var(--rs);font:500 13px/1.35 var(--bd);color:var(--ink)}
+.ppsave b{background:var(--grass);color:var(--ink);font:700 14px/1.2 var(--bd);padding:3px 8px;border-radius:4px}
