@@ -639,3 +639,20 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 .track figure.sk.ph5 img{width:100%;height:auto;transform:none;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
 .pm-art:has(img[src*="hero-5books"]){background:linear-gradient(180deg,#DBF1FC,#C9E6F3);padding:0}
 .pm-art img[src*="hero-5books"]{max-width:none}
+
+@media (min-width:900px){
+ .wrap{max-width:1120px}
+ .wrap.narrow{max-width:792px}
+ .home5 .hero5{padding-left:max(24px,calc((100vw - 1088px)/2));padding-right:max(24px,calc((100vw - 1088px)/2))}
+ .home5 .h5-art img{max-height:520px;width:100%;object-fit:cover}
+ .home5 .hero5 .lead{max-width:30em}
+ .wrap.prose{max-width:752px}
+ .belief{align-items:start}.belief .b-art{margin-top:8px}
+ .b-lead{max-width:62ch}
+ .closing .wrap{max-width:792px}
+ .bk .pgs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;overflow:visible}
+ .bk .pgs img{max-width:none;width:100%}
+ .sec-h p{max-width:62ch}
+ .thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px}.thumbs button{width:auto;height:auto;aspect-ratio:1/1}
+ .cta-row .btn,.page-cta .btn,.pm-tx .btn,.closing .btn{width:auto}
+}
