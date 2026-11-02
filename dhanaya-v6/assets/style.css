@@ -629,12 +629,6 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 .ppsave b{background:var(--grass);color:var(--ink);font:700 14px/1.2 var(--bd);padding:3px 8px;border-radius:4px}
 
 
-.newtag{display:inline-block;background:var(--ink,#14213D);color:#fff;font:700 11px/1.5 var(--bd);letter-spacing:.04em;border-radius:4px;padding:1px 7px;vertical-align:middle}
-h3 .newtag{margin-left:6px;position:relative;top:-2px}
-.bullets .hi-li{font-weight:700}
-.bullets .hi-li .newtag{margin-right:4px}
-.pm-hi{font-weight:700;margin:6px 0 4px}
-.pm-hi .newtag{margin-right:6px}
 .tier .codl{grid-column:2/4;font-size:12px;color:var(--ink2,#3A4660);margin-top:2px}
 .pm.is-off{background:#F1F2F5;border-style:dashed;cursor:not-allowed}
 .pm.is-off .radio{opacity:.4}
