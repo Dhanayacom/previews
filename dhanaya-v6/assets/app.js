@@ -7,7 +7,7 @@ var TIERS={
 };
 function pct(p,m){return Math.round((m-p)/m*100)+"% off";}
 var REVIEWS={count:5,avg:null,showAbove:5};
-var IMG="assets/img/cover-hindi-240.webp";
+var IMG="assets/img/cover-numbers-240.webp";
 function inr(n){var s=(Math.round(n*100)/100).toFixed(n%1?2:0);var p=s.split(".");var x=p[0];var l=x.slice(-3),o=x.slice(0,-3);if(o)l=o.replace(/\B(?=(\d{2})+(?!\d))/g,",")+","+l;return "₹"+l+(p[1]?"."+p[1]:"");}
 function $(s,c){return (c||document).querySelector(s);} function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
 var sel=1;
