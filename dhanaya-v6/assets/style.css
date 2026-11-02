@@ -688,3 +688,5 @@ main>section+section:not([class]),main>section:not([class])+section:not([class])
 .srev-st{color:#C9CFE0;font-size:16px;letter-spacing:2px}.srev-st .on{color:#E8A000}
 .srev blockquote{margin:6px 0 8px;font:500 16px/1.5 var(--bd);color:var(--ink)}
 .srev figcaption{font-size:13.5px;color:var(--ink2)}
+
+.rrow .rcard{justify-content:center}
